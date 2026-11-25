@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Unique AI Text-to-Game Platforms Directory (2D/3D Anime & Reality)</title>
+<style>
+  :root {
+    --bg-dark: #060913;
+    --card-bg: #0d1326;
+    --cyan: #00f3ff;
+    --magenta: #ff007f;
+    --emerald: #00ff88;
+    --amber: #ffb703;
+    --violet: #b565ff;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    background-image:
+      radial-gradient(circle at 15% 15%, rgba(0, 243, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(255, 0, 127, 0.08) 0%, transparent 40%);
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  header {
+    text-align: center;
+    padding: 26px 20px 18px;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.25);
+    background: rgba(6, 9, 19, 0.92);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    font-size: 1.65rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--cyan), #ffffff, var(--magenta));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    margin-bottom: 14px;
+  }
+
+  .top-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .search-input, .filter-select {
+    background: #111936;
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    color: #fff;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    outline: none;
+  }
+
+  .search-input {
+    width: 230px;
+  }
+
+  .history-btn {
+    background: linear-gradient(135deg, #1b284d, #2a1438);
+    border: 1px solid var(--amber);
+    color: var(--amber);
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 2s ease;
+  }
+
+  .history-btn:hover {
+    box-shadow: 0 0 20px var(--amber);
+    background: var(--amber);
+    color: #000;
+  }
+
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--cyan);
+  }
+
+  .container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 24px 18px;
+  }
+
+  .section-banner {
+    margin: 26px 0 18px;
+    padding: 16px 22px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .free-banner {
+    background: linear-gradient(90deg, rgba(0, 255, 136, 0.14), rgba(0, 243, 255, 0.08));
+    border: 1px solid var(--emerald);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+  }
+
+  .paid-banner {
+    background: linear-gradient(90deg, rgba(255, 0, 127, 0.16), rgba(255, 183, 3, 0.08));
+    border: 1px solid var(--magenta);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.15);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(415px, 1fr));
+    gap: 18px;
+  }
+
+  .ai-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 2s ease;
+    position: relative;
+  }
+
+  .ai-card.paid-card {
+    border-color: rgba(255, 0, 127, 0.3);
+  }
+
+  .ai-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--cyan);
+    box-shadow: 0 0 24px rgba(0, 243, 255, 0.45), inset 0 0 12px rgba(0, 243, 255, 0.15);
+  }
+
+  .ai-card.paid-card:hover {
+    border-color: var(--magenta);
+    box-shadow: 0 0 24px rgba(255, 0, 127, 0.45), inset 0 0 12px rgba(255, 0, 127, 0.15);
+  }
+
+  .card-header {
+    cursor: pointer;
+  }
+
+  .badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .num-badge {
+    background: rgba(0, 243, 255, 0.15);
+    color: var(--cyan);
+    font-weight: 800;
+    font-size: 0.76rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 243, 255, 0.4);
+  }
+
+  .cat-badge {
+    font-size: 0.73rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .tier-badge {
+    font-size: 0.73rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+
+  .tier-free {
+    background: rgba(0, 255, 136, 0.16);
+    color: var(--emerald);
+    border: 1px solid var(--emerald);
+  }
+
+  .tier-paid {
+    background: rgba(255, 0, 127, 0.18);
+    color: #ff66b2;
+    border: 1px solid var(--magenta);
+  }
+
+  .dl-fact-badge {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+
+  .dl-yes {
+    background: rgba(0, 243, 255, 0.14);
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+  }
+
+  .dl-no {
+    background: rgba(255, 183, 3, 0.14);
+    color: var(--amber);
+    border: 1px solid var(--amber);
+  }
+
+  .ai-title {
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .ai-def {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .pricing-box {
+    font-size: 0.78rem;
+    background: rgba(255, 0, 127, 0.1);
+    border: 1px dashed rgba(255, 0, 127, 0.5);
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: #ffd1e8;
+    margin-bottom: 10px;
+    transition: all 2s ease;
+  }
+
+  .pricing-box.free-box {
+    background: rgba(0, 255, 136, 0.08);
+    border-color: rgba(0, 255, 136, 0.4);
+    color: #b8ffde;
+  }
+
+  .pricing-box.retrieved-hidden {
+    display: none;
+  }
+
+  .dl-truth-box {
+    font-size: 0.76rem;
+    background: rgba(181, 101, 255, 0.1);
+    border: 1px solid rgba(181, 101, 255, 0.45);
+    padding: 7px 10px;
+    border-radius: 7px;
+    color: #ead6ff;
+    margin-bottom: 10px;
+    transition: all 2s ease;
+  }
+
+  .dl-truth-box.retrieved-hidden {
+    display: none;
+  }
+
+  .tx-list {
+    margin-top: 6px;
+    padding-left: 16px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .btn {
+    flex: 1 1 auto;
+    padding: 7px 9px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-align: center;
+    text-decoration: none;
+    transition: all 2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .btn-want {
+    background: rgba(0, 255, 136, 0.14);
+    border-color: var(--emerald);
+    color: var(--emerald);
+  }
+
+  .btn-want:hover:not(:disabled) {
+    background: var(--emerald);
+    color: #000;
+    box-shadow: 0 0 16px var(--emerald);
+  }
+
+  .btn-notwant {
+    background: rgba(255, 0, 127, 0.14);
+    border-color: var(--magenta);
+    color: #ff66b2;
+  }
+
+  .btn-notwant:hover:not(:disabled) {
+    background: var(--magenta);
+    color: #fff;
+    box-shadow: 0 0 16px var(--magenta);
+  }
+
+  .btn-dl-yes {
+    background: rgba(0, 243, 255, 0.14);
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
+  .btn-dl-yes:hover:not(:disabled) {
+    background: var(--cyan);
+    color: #000;
+    box-shadow: 0 0 16px var(--cyan);
+  }
+
+  .btn-dl-no {
+    background: rgba(181, 101, 255, 0.16);
+    border-color: var(--violet);
+    color: #dfb8ff;
+  }
+
+  .btn-dl-no:hover:not(:disabled) {
+    background: var(--violet);
+    color: #fff;
+    box-shadow: 0 0 16px var(--violet);
+  }
+
+  .btn-visit {
+    background: rgba(255, 183, 3, 0.14);
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  .btn-visit:hover {
+    background: var(--amber);
+    color: #000;
+    box-shadow: 0 0 16px var(--amber);
+  }
+
+  .btn:disabled {
+    opacity: 0.42;
+    cursor: not-allowed;
+  }
+
+  .lock-status {
+    margin-top: 9px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    display: none;
+    transition: all 2s ease;
+  }
+
+  .lock-status.active {
+    display: block;
+    animation: popBlinkGlow 2s ease;
+  }
+
+  .lock-status.status-want {
+    background: rgba(0, 255, 136, 0.14);
+    border: 1px solid var(--emerald);
+    color: var(--emerald);
+    box-shadow: 0 0 14px rgba(0, 255, 136, 0.35);
+  }
+
+  .lock-status.status-notwant {
+    background: rgba(255, 0, 127, 0.16);
+    border: 1px solid var(--magenta);
+    color: #ff85c0;
+    box-shadow: 0 0 14px rgba(255, 0, 127, 0.35);
+  }
+
+  .lock-status.status-dl {
+    background: rgba(0, 243, 255, 0.14);
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    box-shadow: 0 0 14px rgba(0, 243, 255, 0.35);
+  }
+
+  @keyframes popBlinkGlow {
+    0% { opacity: 0.1; box-shadow: 0 0 30px var(--cyan); }
+    35% { opacity: 1; box-shadow: 0 0 26px var(--emerald); }
+    70% { opacity: 0.75; box-shadow: 0 0 10px var(--magenta); }
+    100% { opacity: 1; }
+  }
+
+  /* MODAL OVERLAY & 2s EASE FADE + GLOW BLINK CLOSE ANIMATION */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 6, 15, 0.88);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 18px;
+    opacity: 1;
+    transition: opacity 2s ease;
+  }
+
+  .modal-overlay.open {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal-overlay.closing {
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+
+  .modal-box {
+    background: #0b1124;
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 35px rgba(0, 243, 255, 0.45);
+    border-radius: 16px;
+    max-width: 740px;
+    width: 100%;
+    padding: 24px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    transition: all 2s ease;
+  }
+
+  .modal-overlay.closing .modal-box {
+    animation: modalBlinkGlowFade 2s ease forwards;
+  }
+
+  @keyframes modalBlinkGlowFade {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 0 40px var(--cyan), 0 0 70px var(--magenta);
+      border-color: var(--emerald);
+    }
+    40% {
+      opacity: 0.7;
+      transform: scale(0.98);
+      box-shadow: 0 0 55px var(--magenta), 0 0 20px var(--cyan);
+      border-color: var(--magenta);
+    }
+    75% {
+      opacity: 0.35;
+      transform: scale(0.95);
+      box-shadow: 0 0 25px var(--cyan);
+      border-color: var(--cyan);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.92);
+      box-shadow: 0 0 0px transparent;
+    }
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: transparent;
+    border: 1px solid var(--magenta);
+    color: var(--magenta);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 2s ease;
+  }
+
+  .close-modal:hover {
+    background: var(--magenta);
+    color: #fff;
+    box-shadow: 0 0 15px var(--magenta);
+  }
+
+  .equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 26px;
+    margin: 12px 0;
+  }
+
+  .bar {
+    width: 5px;
+    height: 6px;
+    background: var(--cyan);
+    border-radius: 3px;
+    transition: height 0.15s ease;
+  }
+
+  .equalizer.speaking .bar {
+    animation: eqPulse 0.45s infinite alternate;
+  }
+
+  .equalizer.speaking .bar:nth-child(2) { animation-delay: 0.1s; background: var(--magenta); }
+  .equalizer.speaking .bar:nth-child(3) { animation-delay: 0.2s; background: var(--emerald); }
+  .equalizer.speaking .bar:nth-child(4) { animation-delay: 0.3s; background: var(--amber); }
+  .equalizer.speaking .bar:nth-child(5) { animation-delay: 0.15s; }
+
+  @keyframes eqPulse {
+    from { height: 6px; }
+    to { height: 26px; }
+  }
+
+  .history-item {
+    background: #111936;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .history-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-retrieve {
+    background: rgba(255, 183, 3, 0.16);
+    border: 1px solid var(--amber);
+    color: var(--amber);
+  }
+
+  .btn-retrieve:hover {
+    background: var(--amber);
+    color: #000;
+    box-shadow: 0 0 16px var(--amber);
+  }
+
+  .btn-keep-locked {
+    background: rgba(255, 0, 127, 0.18);
+    border: 1px solid var(--magenta);
+    color: #ff85c0;
+  }
+
+  .btn-keep-locked:hover {
+    background: var(--magenta);
+    color: #fff;
+    box-shadow: 0 0 16px var(--magenta);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>100 Unique AI Text-to-Game Platforms</h1>
+  <div class="subtitle">Zero Duplicate Names • 2D/3D Anime &amp; Reality • Honest Download Fact + Really Download / Not Buttons + Offline Permanent Lock</div>
+  <div class="top-controls">
+    <input type="text" id="searchInput" class="search-input" placeholder="Search unique AI tool, class, or download...">
+    <select id="categoryFilter" class="filter-select">
+      <option value="ALL">All 4 Game Classes (100 AI Tools)</option>
+      <option value="2D Anime">2D Anime Game AI</option>
+      <option value="3D Anime">3D Anime Game AI</option>
+      <option value="2D Reality">2D Reality Game AI</option>
+      <option value="3D Reality">3D Reality Game AI</option>
+    </select>
+    <select id="tierFilter" class="filter-select">
+      <option value="ALL">All Access Tiers (Free + Paid)</option>
+      <option value="FREE">01–50: Free Access Account Only</option>
+      <option value="PAID">51–100: Paid / Premium Subscriptions Only</option>
+    </select>
+    <select id="downloadFilter" class="filter-select">
+      <option value="ALL">Real Download Reality: All (100)</option>
+      <option value="CAN_DOWNLOAD">Real Downloadable Only (~74 AI)</option>
+      <option value="NO_DOWNLOAD">No Direct Download / Web-Only Only (~26 AI)</option>
+    </select>
+    <button class="history-btn" id="openHistoryBtn">📜 HISTORY &amp; RETRIEVE (<span id="historyCount">0</span>)</button>
+  </div>
+  <div class="stats-bar">
+    <span>📊 Showing: <strong id="visibleCount">100</strong> AI Tools</span>
+    <span>⬇️ Real Downloadable: <strong id="realDlCount">0</strong></span>
+    <span>🚫 Web-Only / No Direct DL: <strong id="noDlCount">0</strong></span>
+    <span>🔒 Permanently Saved: <strong id="permCount">0</strong></span>
+    <span>🗑️ Retrieved (Cleared): <strong id="clearedCount">0</strong></span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="section-banner free-banner" id="freeSectionHeader">
+    <div>
+      <h2 style="color: var(--emerald); font-size: 1.25rem;">SECTION A (01–50): FREE ACCESS ACCOUNT AI PLATFORMS</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">50 distinct AI platforms with free access accounts, open-source engines, and free starter credits.</p>
+    </div>
+  </div>
+  <div class="grid" id="freeGrid"></div>
+
+  <div class="section-banner paid-banner" id="paidSectionHeader">
+    <div>
+      <h2 style="color: #ff66b2; font-size: 1.25rem;">SECTION B (51–100): PAID / PREMIUM SUBSCRIPTION AI PLATFORMS</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">50 distinct AI platforms with full Weekly, Monthly, and Yearly transaction amounts shown directly in the dialog box.</p>
+    </div>
+  </div>
+  <div class="grid" id="paidGrid"></div>
+</div>
+
+<!-- AI DETAIL DIALOG MODAL -->
+<div class="modal-overlay" id="detailModal">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="close-modal" id="closeDetailModal">✕ CLOSE</button>
+    <div id="modalBadges" class="badge-row"></div>
+    <h2 id="modalTitle" style="color: var(--cyan); margin: 8px 0;"></h2>
+    <div class="equalizer" id="voiceEqualizer">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <span style="font-size: 0.78rem; color: var(--cyan); margin-left: 8px;" id="voiceStatusText">AI Voice Synthesizer Ready</span>
+    </div>
+    <p id="modalDef" style="line-height: 1.6; color: #e2e8f0; margin-bottom: 12px;"></p>
+    <div id="modalPricing" class="pricing-box" style="margin-bottom: 12px;"></div>
+    <div id="modalDlTruth" class="dl-truth-box" style="margin-bottom: 14px;"></div>
+    <div id="modalLockBanner" class="lock-status" style="margin-bottom: 14px;"></div>
+    <div class="action-bar">
+      <button class="btn btn-visit" id="modalReplayVoice">🔊 Replay AI Voice</button>
+      <a class="btn btn-visit" id="modalVisitLink" href="#" target="_blank" rel="noopener noreferrer">🌐 Open Official AI Site (New Tab)</a>
+      <button class="btn btn-want" id="modalWantBtn">✅ Want to visit this</button>
+      <button class="btn btn-notwant" id="modalNotWantBtn">⛔ I don't want to visit this</button>
+      <button class="btn btn-dl-yes" id="modalDlYesBtn">⬇️ Really Download</button>
+      <button class="btn btn-dl-no" id="modalDlNoBtn">🚫 Not Download</button>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORY & RETRIEVE MODAL -->
+<div class="modal-overlay" id="historyModal">
+  <div class="modal-box" style="border-color: var(--amber); box-shadow: 0 0 35px rgba(255, 183, 3, 0.35);" onclick="event.stopPropagation()">
+    <button class="close-modal" id="closeHistoryModal">✕ CLOSE</button>
+    <h2 style="color: var(--amber); margin-bottom: 6px;">📜 HISTORY: RETRIEVE vs. NOT RETRIEVE</h2>
+    <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 16px;">
+      • <strong>RETRIEVE:</strong> Immediately removes the pop-up tier/transaction list, real-download note, and saved Want/Not/Download choices offline—saved so even after refresh it stays removed.<br>
+      • <strong>NOT RETRIEVE:</strong> Keeps the old pop-up tier/transaction list, real-download note, and saved Want/Not/Download choices permanently visible and locked offline even after refresh.
+    </p>
+    <div id="historyListContainer"></div>
+  </div>
+</div>
+
+<script>
+// ============================================================================
+// 1. 100 STRICTLY UNIQUE AI TEXT-TO-GAME PLATFORMS + HONEST DOWNLOAD REALITY
+// ============================================================================
+const freePlatforms = [
+  { id: 1, name: "Rosebud AI Free Sandbox", cat: "2D Anime", url: "https://rosebud.ai", def: "Text-to-playable browser game maker generating 2D anime visual novels, RPG sprites, and JavaScript gameplay from prompts.", txSummary: "Free Tier: $0.00 upfront • 10,000 free weekly credits", txList: ["Weekly Free Credits: $0.00 (10,000 pts)", "Monthly Starter Access: $0.00", "Yearly Free Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports playable HTML5/JS project files & generated 2D anime sprite assets." },
+  { id: 2, name: "Makko AI Starter Studio", cat: "2D Anime", url: "https://makko.ai", def: "Prompt-driven 2D anime character, background, and Code Studio logic generator that builds playable browser games.", txSummary: "Free Tier: $0.00 upfront • 150 monthly art + 70 weekly code chats", txList: ["Weekly Free Code Chats: $0.00 (70 chats)", "Monthly Free Art Tier: $0.00 (150 credits)", "Yearly Free Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Allows downloading generated 2D anime sprites & code snippets (full bundle varies by tier)." },
+  { id: 3, name: "GDevelop Free Engine", cat: "2D Reality", url: "https://gdevelop.io", def: "No-code 2D/3D game engine with built-in AI event logic generator and instant browser scene builder.", txSummary: "Free Tier: $0.00 upfront • 40 monthly AI credits", txList: ["Weekly Free Editor Use: $0.00", "Monthly Free AI Credits: $0.00 (40 credits)", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Full offline desktop engine installer (Windows/macOS/Linux) + local game export." },
+  { id: 4, name: "Godot Engine AI Assistant", cat: "3D Reality", url: "https://godotengine.org", def: "Open-source 2D & 3D game engine compatible with AI GDScript and shader text-to-code plugins.", txSummary: "Free Tier: $0.00 forever • Open-source MIT license", txList: ["Weekly Engine & AI Plugins: $0.00", "Monthly Open-Source Tier: $0.00", "Yearly Open-Source Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: 100% downloadable standalone binary engine & offline 3D project files." },
+  { id: 5, name: "Kimi 3D Make", cat: "3D Reality", url: "https://www.kimi.ai", def: "Natural-language prompt-to-3D browser game generator compiling interactive 3D worlds with instant share links.", txSummary: "Free Tier: $0.00 upfront • Free web 3D build access", txList: ["Weekly Free 3D Builds: $0.00", "Monthly Free Workspace: $0.00", "Yearly Free Workspace: $0.00"], canDownload: false, dlNote: "NO DIRECT INSTALLER: Primarily a web-based prompt-to-3D preview/link environment rather than a standalone desktop engine." },
+  { id: 6, name: "Nilo 3D Free Maker", cat: "3D Anime", url: "https://nilo.io", def: "Browser-based collaborative 3D game creator turning text prompts into stylized 3D worlds and meshes.", txSummary: "Free Tier: $0.00 upfront • Free weekly AI world prompts", txList: ["Weekly Free AI Prompts: $0.00", "Monthly Starter Account: $0.00", "Yearly Starter Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Supports exporting 3D mesh/scene files for external 3D/game tools." },
+  { id: 7, name: "SEELE AI Free Prototype", cat: "3D Reality", url: "https://www.seeles.ai", def: "Text-to-3D playable prototype engine creating environments, physics, animations, and web exports.", txSummary: "Free Tier: $0.00 upfront • Free browser prototype quota", txList: ["Weekly Free Prototypes: $0.00", "Monthly Free Tier: $0.00", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generates exportable 3D prototype scenes/assets (full engine export expands on paid plans)." },
+  { id: 8, name: "PlayDrop AI Basic", cat: "3D Anime", url: "https://playdrop.ai", def: "Prompt-to-browser 3D arcade and anime-styled mini-game generator with one-click cloud hosting.", txSummary: "Free Tier: $0.00 Basic Plan • Daily free credits", txList: ["Weekly Daily Credits: $0.00", "Monthly Basic Plan: $0.00", "Yearly Basic Plan: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Focused on instant browser/cloud playable links rather than local offline engine installers." },
+  { id: 9, name: "SoonLab AI Free", cat: "2D Anime", url: "https://soonlab.ai", def: "Conversational AI game builder that asks clarifying design questions before generating playable 2D/3D browser games.", txSummary: "Free Tier: $0.00 upfront • Free trial generation points", txList: ["Weekly Trial Points: $0.00", "Monthly Free Quota: $0.00", "Yearly Free Quota: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Web-hosted conversational game generator; runs in browser rather than local desktop installer." },
+  { id: 10, name: "Summer Engine Free", cat: "3D Reality", url: "https://summerengine.com", def: "Desktop AI-native game engine turning text briefs into local editable 2D and 3D multi-platform builds.", txSummary: "Free Tier: $0.00 desktop app • Free hosted AI allowance", txList: ["Weekly Local Builds: $0.00", "Monthly Hosted AI Quota: $0.00", "Yearly Free Desktop Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable desktop AI game engine with local project files & builds." },
+  { id: 11, name: "Chatforce AI Free Creator", cat: "2D Reality", url: "https://chatforce.com/ai-game-maker", def: "Chat-based 2D & 3D multiplayer game creator generating platformers, tower defense, and idle games from text.", txSummary: "Free Tier: $0.00 upfront • Free Creator Program", txList: ["Weekly Free Chips: $0.00", "Monthly Creator Free Tier: $0.00", "Yearly Creator Free Tier: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Cloud/web chat game maker; no standalone local engine binary download." },
+  { id: 12, name: "BitMagic AI Free", cat: "3D Reality", url: "https://bitmagic.games", def: "Text-prompt 3D game world generator creating playable third-person adventures and interactive terrain.", txSummary: "Free Tier: $0.00 upfront • Free Alpha creator access", txList: ["Weekly Free World Gens: $0.00", "Monthly Alpha Free Tier: $0.00", "Yearly Alpha Free Tier: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Web-based 3D world generator; no direct local installer package." },
+  { id: 13, name: "FRVR Forge AI Free", cat: "2D Reality", url: "https://frvr.com", def: "Natural-language instant arcade and casual 2D HTML5 game generator built for rapid web deployment.", txSummary: "Free Tier: $0.00 upfront • Free creator beta access", txList: ["Weekly Free HTML5 Gens: $0.00", "Monthly Beta Free Tier: $0.00", "Yearly Beta Free Tier: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Browser/cloud HTML5 publishing workflow without a standalone local engine installer." },
+  { id: 14, name: "RPGGO AI Free", cat: "2D Anime", url: "https://www.rpggo.ai", def: "Text-to-anime RPG and visual novel generator creating AI NPCs, branching quests, and 2D anime portraits.", txSummary: "Free Tier: $0.00 upfront • Free player & creator account", txList: ["Weekly Free RPG Runs: $0.00", "Monthly Free Account: $0.00", "Yearly Free Account: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Hosted online anime RPG/visual novel platform; played/created on the web." },
+  { id: 15, name: "AI Dungeon Free Griffin", cat: "2D Anime", url: "https://aidungeon.com", def: "AI-powered interactive text & illustrated RPG world generator driven by dynamic language models.", txSummary: "Free Tier: $0.00 upfront • Unlimited free model turns", txList: ["Weekly Free Model Turns: $0.00", "Monthly Free Account: $0.00", "Yearly Free Account: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Cloud LLM interactive fiction/RPG service (web/mobile client only, no local AI weights)." },
+  { id: 16, name: "Friends & Fables Free", cat: "2D Anime", url: "https://fables.gg", def: "AI Game Master platform generating 2D anime campaign maps, character sheets, and tactical encounters.", txSummary: "Free Tier: $0.00 upfront • Free campaign starter tier", txList: ["Weekly Free GM Turns: $0.00", "Monthly Starter Tier: $0.00", "Yearly Starter Tier: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Web-based AI tabletop/RPG campaign platform without local offline engine install." },
+  { id: 17, name: "Charisma.ai Free Starter", cat: "3D Anime", url: "https://charisma.ai", def: "Interactive narrative AI engine powering emotional 2D/3D anime character dialogue for Unity and Unreal.", txSummary: "Free Tier: $0.00 upfront • Free Starter creator plan", txList: ["Weekly Free Dialogue Runs: $0.00", "Monthly Starter Plan: $0.00", "Yearly Starter Plan: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Provides downloadable SDK/plugins & dialogue JSON data for Unity/Unreal." },
+  { id: 18, name: "Inworld AI Free Sandbox", cat: "3D Reality", url: "https://inworld.ai", def: "AI NPC brain engine adding real-time voice, memory, and personality to 3D realistic and anime characters.", txSummary: "Free Tier: $0.00 upfront • Free developer sandbox", txList: ["Weekly Sandbox Credits: $0.00", "Monthly Dev Free Tier: $0.00", "Yearly Dev Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Offers downloadable Unity/Unreal SDKs to connect characters into local 3D builds." },
+  { id: 19, name: "Convai NPC Free Indie", cat: "3D Reality", url: "https://convai.com", def: "Conversational AI character plugin enabling voice-driven 3D NPCs in Unreal Engine, Unity, and WebGL.", txSummary: "Free Tier: $0.00 upfront • Free Indie Developer plan", txList: ["Weekly Free NPC Chats: $0.00", "Monthly Free Indie Tier: $0.00", "Yearly Free Indie Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable Unreal Engine & Unity plugins for local 3D game integration." },
+  { id: 20, name: "PixelLab Free Sprites", cat: "2D Anime", url: "https://www.pixellab.ai", def: "Text-to-2D anime pixel-art sprite sheet and directional walk-cycle generator for retro RPGs.", txSummary: "Free Tier: $0.00 upfront • Free trial sprite credits", txList: ["Weekly Trial Sprites: $0.00", "Monthly Free Trial: $0.00", "Yearly Free Trial: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generates downloadable PNG sprite sheets for 2D game engines." },
+  { id: 21, name: "Scenario AI Free Starter", cat: "2D Anime", url: "https://www.scenario.com", def: "Style-consistent 2D anime game asset, UI icon, and character portrait generator.", txSummary: "Free Tier: $0.00 upfront • Free starter asset credits", txList: ["Weekly Free Asset Gens: $0.00", "Monthly Starter Tier: $0.00", "Yearly Starter Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated 2D anime sprites, icons, and textures can be downloaded as image files." },
+  { id: 22, name: "Layer.ai Free Trial", cat: "2D Reality", url: "https://www.layer.ai", def: "Production-ready 2D game environment, isometric tile, and realistic texture generator from text prompts.", txSummary: "Free Tier: $0.00 upfront • Free indie studio trial", txList: ["Weekly Free Textures: $0.00", "Monthly Trial Tier: $0.00", "Yearly Trial Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Outputs downloadable 2D environment art & texture files for game engines." },
+  { id: 23, name: "Meshy AI Free Credits", cat: "3D Reality", url: "https://www.meshy.ai", def: "Text-to-3D PBR mesh and texture generator producing GLB/FBX models for 3D games.", txSummary: "Free Tier: $0.00 upfront • 200 monthly free credits", txList: ["Weekly Free 3D Gens: $0.00", "Monthly Free Tier: $0.00 (200 credits)", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Directly downloads 3D meshes (GLB/FBX/OBJ) & PBR texture maps." },
+  { id: 24, name: "Tripo 3D Free Tier", cat: "3D Anime", url: "https://www.tripo3d.ai", def: "Fast text-to-3D anime character and prop generator outputting rigged, game-ready 3D meshes.", txSummary: "Free Tier: $0.00 upfront • 300 monthly free credits", txList: ["Weekly Free Mesh Gens: $0.00", "Monthly Free Tier: $0.00 (300 credits)", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Directly downloads 3D anime models & rigged assets for Unity/Blender/Unreal." },
+  { id: 25, name: "Luma Genie Free Web", cat: "3D Reality", url: "https://lumalabs.ai/genie", def: "Text-to-3D object generator creating quad-remeshed, UV-unwrapped realistic game props.", txSummary: "Free Tier: $0.00 upfront • Free web generations", txList: ["Weekly Free Web Props: $0.00", "Monthly Free Tier: $0.00", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable 3D mesh files for local 3D pipelines." },
+  { id: 26, name: "CSM.ai Free Hobbyist", cat: "3D Anime", url: "https://www.csm.ai", def: "Text and concept-art to 3D anime character mesh generator for Unreal and Unity pipelines.", txSummary: "Free Tier: $0.00 upfront • Free Hobbyist tier", txList: ["Weekly Hobbyist Gens: $0.00", "Monthly Free Hobbyist: $0.00", "Yearly Free Hobbyist: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Allows downloading generated 3D character meshes for local game engines." },
+  { id: 27, name: "Rodin Gen-1 Free Trial", cat: "3D Reality", url: "https://hyperhuman.deemos.com", def: "High-detail text-to-3D realistic human and creature geometry generator with PBR maps.", txSummary: "Free Tier: $0.00 upfront • Free trial credits", txList: ["Weekly Free Trial Gens: $0.00", "Monthly Free Trial: $0.00", "Yearly Free Trial: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generates downloadable 3D geometry & texture maps (export limits depend on plan)." },
+  { id: 28, name: "Sloyd AI Free Basic", cat: "3D Reality", url: "https://www.sloyd.ai", def: "Parametric text-to-3D weapon, building, and prop generator optimized for low-poly game performance.", txSummary: "Free Tier: $0.00 upfront • Free basic exports", txList: ["Weekly Free Prop Exports: $0.00", "Monthly Basic Tier: $0.00", "Yearly Basic Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Directly downloads 3D props/weapons in standard game formats." },
+  { id: 29, name: "Blockade Labs Skybox Free", cat: "3D Reality", url: "https://skybox.blockadelabs.com", def: "Text-to-360° HDRI skybox generator creating immersive 3D reality and anime world backgrounds.", txSummary: "Free Tier: $0.00 upfront • Free monthly skyboxes", txList: ["Weekly Free Skyboxes: $0.00", "Monthly Free Tier: $0.00", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads 360° panorama/skybox image files for 3D sky domes." },
+  { id: 30, name: "Spline AI Free Basic", cat: "3D Anime", url: "https://spline.design/ai", def: "Browser-based 3D interactive scene builder with AI text-to-3D object and texture generation.", txSummary: "Free Tier: $0.00 upfront • Free Basic account", txList: ["Weekly Free Scene Edits: $0.00", "Monthly Basic Account: $0.00", "Yearly Basic Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Supports exporting 3D objects/scenes (full code/file export options vary by plan)." },
+  { id: 31, name: "Masterpiece X Free Signup", cat: "3D Anime", url: "https://www.masterpiecex.com", def: "Text-to-3D mesh, texture, and auto-rigged animation generator built for indie game developers.", txSummary: "Free Tier: $0.00 upfront • 250 free signup credits", txList: ["Weekly Free Rig/Mesh Gens: $0.00", "Monthly Free Signup Tier: $0.00", "Yearly Free Signup Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads rigged/textured 3D models for game engine import." },
+  { id: 32, name: "3DFY.ai Free Trial", cat: "3D Reality", url: "https://3dfy.ai", def: "Prompt-based 3D game asset generator producing clean topology swords, furniture, and vehicles.", txSummary: "Free Tier: $0.00 upfront • Free trial credits", txList: ["Weekly Free Asset Gens: $0.00", "Monthly Free Trial: $0.00", "Yearly Free Trial: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable 3D mesh assets (GLB/FBX/OBJ)." },
+  { id: 33, name: "Hunyuan3D Open Model", cat: "3D Anime", url: "https://3d.hunyuan.tencent.com", def: "Open-weight text-to-3D anime & realistic model generator supporting high-resolution PBR textures.", txSummary: "Free Tier: $0.00 upfront • Open-weight / free web space", txList: ["Weekly Free 3D Gens: $0.00", "Monthly Open Tier: $0.00", "Yearly Open Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Open weights & generated 3D meshes can be downloaded for local use." },
+  { id: 34, name: "InstantMesh Open 3D", cat: "3D Reality", url: "https://huggingface.co/spaces/TencentARC/InstantMesh", def: "Open-source sparse-view text/image-to-3D mesh generator for rapid game asset prototyping.", txSummary: "Free Tier: $0.00 forever • 100% Free Open Source", txList: ["Weekly Open Mesh Gens: $0.00", "Monthly Open Source: $0.00", "Yearly Open Source: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: 100% open-source code/weights + downloadable generated 3D meshes." },
+  { id: 35, name: "TRELLIS 3D Open Latent", cat: "3D Reality", url: "https://trellis3d.github.io", def: "Structured 3D latent text-to-3D asset generator outputting radiance fields, Gaussians, and meshes.", txSummary: "Free Tier: $0.00 forever • 100% Free Open Source", txList: ["Weekly Open Latent Gens: $0.00", "Monthly Open Source: $0.00", "Yearly Open Source: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Open-source model/repo + downloadable 3D mesh/Gaussian outputs." },
+  { id: 36, name: "Blender Dream Textures", cat: "3D Reality", url: "https://www.blender.org", def: "Free 3D creation suite enhanced with local AI text-to-texture and UV projection add-ons.", txSummary: "Free Tier: $0.00 forever • Free open-source suite", txList: ["Weekly Local AI Textures: $0.00", "Monthly Free Suite: $0.00", "Yearly Free Suite: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Full downloadable offline 3D suite & add-on files." },
+  { id: 37, name: "Construct 3 Free Browser", cat: "2D Reality", url: "https://www.construct.net", def: "Browser-based 2D HTML5 game engine supporting AI-assisted JavaScript scripting and event sheets.", txSummary: "Free Tier: $0.00 upfront • Free browser edition", txList: ["Weekly Browser Builds: $0.00", "Monthly Free Browser: $0.00", "Yearly Free Browser: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD ON FREE TIER: Free edition runs in browser; full native/desktop export requires paid license." },
+  { id: 38, name: "Phaser AI Framework", cat: "2D Anime", url: "https://phaser.io", def: "Open-source HTML5 2D game framework used with AI text-to-code prompts to build browser anime games.", txSummary: "Free Tier: $0.00 forever • 100% Free MIT License", txList: ["Weekly MIT Framework Use: $0.00", "Monthly Free MIT Tier: $0.00", "Yearly Free MIT Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable open-source library, templates, and local JS game builds." },
+  { id: 39, name: "Three.js WebGL AI", cat: "3D Reality", url: "https://threejs.org", def: "Open-source 3D browser engine paired with AI text-to-shader and scene generators for 3D web games.", txSummary: "Free Tier: $0.00 forever • 100% Free MIT License", txList: ["Weekly WebGL 3D Builds: $0.00", "Monthly Free MIT Tier: $0.00", "Yearly Free MIT Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable open-source Three.js library & local 3D source code." },
+  { id: 40, name: "PlayCanvas Public Free", cat: "3D Reality", url: "https://playcanvas.com", def: "Cloud-hosted WebGL 3D game engine with AI code completion and real-time multiplayer scene editing.", txSummary: "Free Tier: $0.00 upfront • Free Public projects tier", txList: ["Weekly Public 3D Projects: $0.00", "Monthly Free Public: $0.00", "Yearly Free Public: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Open-source engine repo & project/build download support." },
+  { id: 41, name: "Waifu Labs Character AI", cat: "2D Anime", url: "https://waifulabs.com", def: "AI anime character portrait generator creating custom 2D visual novel cast members in 4 steps.", txSummary: "Free Tier: $0.00 upfront • Free character portraits", txList: ["Weekly Free Portraits: $0.00", "Monthly Free Account: $0.00", "Yearly Free Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated 2D anime character portraits can be downloaded directly." },
+  { id: 42, name: "NovelAI Free Trial", cat: "2D Anime", url: "https://novelai.net", def: "AI text adventure storytelling and anime character illustration generator for visual novel creators.", txSummary: "Free Tier: $0.00 upfront • Free 50-action trial", txList: ["Weekly Free Trial Actions: $0.00", "Monthly Free Trial: $0.00", "Yearly Free Trial: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Web-based story/image generator; no standalone local AI model download." },
+  { id: 43, name: "HoloAI Story Engine", cat: "2D Anime", url: "https://writeholo.com", def: "Interactive text-to-adventure game engine generating branching fantasy and anime RPG narratives.", txSummary: "Free Tier: $0.00 upfront • Free trial word allowance", txList: ["Weekly Free Story Words: $0.00", "Monthly Free Trial: $0.00", "Yearly Free Trial: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Cloud interactive story/RPG web service without local engine download." },
+  { id: 44, name: "Ludo.ai Free Ideation", cat: "2D Reality", url: "https://ludo.ai", def: "AI game ideation, 2D sprite generator, and GDD creator from natural-language prompts.", txSummary: "Free Tier: $0.00 upfront • Free starter ideation credits", txList: ["Weekly Free Ideation: $0.00", "Monthly Starter Tier: $0.00", "Yearly Starter Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated 2D game sprites/images can be downloaded for your project." },
+  { id: 45, name: "TokkingHeads Portrait AI", cat: "2D Anime", url: "https://www.rosebud.ai/tokkingheads", def: "AI portrait animator turning static 2D anime characters into talking, lip-synced visual novel sprites.", txSummary: "Free Tier: $0.00 upfront • Free web animator access", txList: ["Weekly Free Lip-Sync Gens: $0.00", "Monthly Free Web Access: $0.00", "Yearly Free Web Access: $0.00"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Web-based portrait animation demo/tool without local installer." },
+  { id: 46, name: "DeepMotion Free Animate", cat: "3D Anime", url: "https://www.deepmotion.com", def: "AI text-to-motion and video-to-3D skeletal animation tool for 3D anime and realistic characters.", txSummary: "Free Tier: $0.00 upfront • Free monthly motion credits", txList: ["Weekly Free Motion Gens: $0.00", "Monthly Free Credits: $0.00", "Yearly Free Credits: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports 3D animation files (FBX/BVH) for game character rigs." },
+  { id: 47, name: "Mixamo Auto-Rigger", cat: "3D Reality", url: "https://www.mixamo.com", def: "Automated 3D character rigging and motion library for AI-generated humanoid game models.", txSummary: "Free Tier: $0.00 forever • Free with Adobe ID", txList: ["Weekly Free Auto-Rigs: $0.00", "Monthly Free Account: $0.00", "Yearly Free Account: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Directly downloads rigged 3D characters & animations (FBX/DAE)." },
+  { id: 48, name: "ElevenLabs Free Voice", cat: "2D Anime", url: "https://elevenlabs.io", def: "Text-to-speech AI voice acting generator for 2D/3D anime characters and game dialogue.", txSummary: "Free Tier: $0.00 upfront • 10,000 free chars/month", txList: ["Weekly Free Voice Chars: $0.00", "Monthly Free Tier: $0.00 (10k chars)", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads generated character voice audio files (MP3/WAV)." },
+  { id: 49, name: "Suno AI Free Daily BGM", cat: "2D Reality", url: "https://suno.com", def: "Text-to-music AI generator producing looping chiptune, anime orchestral, and realistic game BGM.", txSummary: "Free Tier: $0.00 upfront • 50 daily free credits", txList: ["Weekly Daily Free Credits: $0.00", "Monthly Free Tier: $0.00", "Yearly Free Tier: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated game music tracks can be downloaded for non-commercial/free use." },
+  { id: 50, name: "Stable Audio Free SFX", cat: "3D Reality", url: "https://stability.ai/stable-audio", def: "Text-to-SFX and ambient soundscape generator for 3D realistic environments and combat effects.", txSummary: "Free Tier: $0.00 upfront • Free monthly SFX quota", txList: ["Weekly Free SFX Gens: $0.00", "Monthly Free Quota: $0.00", "Yearly Free Quota: $0.00"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads generated sound effects & ambience audio files." }
+];
+
+const paidPlatforms = [
+  { id: 51, name: "Rosebud AI Studio Pro", cat: "3D Anime", url: "https://rosebud.ai/pricing", def: "Commercial text-to-WebGL 2D/3D game generator with downloadable source code and Windows EXE builds.", txSummary: "Paid Transactions: Weekly $12.50 | Monthly $50.00 | Yearly $480.00", txList: ["Weekly Transaction: $12.50 / week", "Monthly Transaction: $50.00 / month", "Yearly Transaction: $480.00 / year ($40/mo eq.)"], canDownload: true, dlNote: "REAL DOWNLOAD: Unlocks full downloadable source code & executable/export builds." },
+  { id: 52, name: "Makko AI Commercial Pro", cat: "2D Anime", url: "https://makko.ai", def: "High-definition 2D anime sprite animation studio with PNG/JSON export and commercial IP rights.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.00 | Yearly $279.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.00 / month", "Yearly Transaction: $279.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable 2D anime sprite sheets, PNGs & JSON data." },
+  { id: 53, name: "Meshy AI Pro 3D", cat: "3D Reality", url: "https://www.meshy.ai/pricing", def: "Enterprise text-to-3D quad-mesh, 4K PBR texture, and auto-rigging suite for Unreal & Unity.", txSummary: "Paid Transactions: Weekly $5.00 | Monthly $20.00 | Yearly $192.00", txList: ["Weekly Transaction: $5.00 / week", "Monthly Transaction: $20.00 / month", "Yearly Transaction: $192.00 / year ($16/mo eq.)"], canDownload: true, dlNote: "REAL DOWNLOAD: High-quota download of quad meshes, 4K PBR maps & rigged 3D files." },
+  { id: 54, name: "Tripo 3D Studio Max", cat: "3D Anime", url: "https://www.tripo3d.ai/pricing", def: "Commercial text-to-3D anime character & asset pipeline with topology refinement and FBX export.", txSummary: "Paid Transactions: Weekly $5.00 | Monthly $19.90 | Yearly $190.00", txList: ["Weekly Transaction: $5.00 / week", "Monthly Transaction: $19.90 / month", "Yearly Transaction: $190.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Full commercial download of refined 3D anime meshes & FBX/GLB assets." },
+  { id: 55, name: "Scenario AI Custom LoRA", cat: "2D Anime", url: "https://www.scenario.com/pricing", def: "Custom LoRA model training for cohesive 2D anime game art, UI, and character sheets with API.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $228.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $228.00 / year ($19/mo eq.)"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable custom 2D anime game art, sprites & UI assets." },
+  { id: 56, name: "Ludo.ai Studio Plan", cat: "2D Reality", url: "https://ludo.ai/pricing", def: "Complete AI game production suite with 2D/3D asset generation, market trends, and prototypes.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.00 | Yearly $290.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.00 / month", "Yearly Transaction: $290.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads generated 2D/3D game assets & design documents." },
+  { id: 57, name: "SEELE AI Engine Pro", cat: "3D Reality", url: "https://www.seeles.ai", def: "Full-stack text-to-3D game generator unlocking Unreal Engine 5 project exports and multiplayer.", txSummary: "Paid Transactions: Weekly $9.99 | Monthly $39.00 | Yearly $380.00", txList: ["Weekly Transaction: $9.99 / week", "Monthly Transaction: $39.00 / month", "Yearly Transaction: $380.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Unlocks downloadable 3D engine project files & game assets." },
+  { id: 58, name: "Chatforce Pro Multiplayer", cat: "2D Reality", url: "https://chatforce.com/ai-game-maker", def: "High-capacity prompt-to-multiplayer 2D & 3D game creator with 4,200 monthly generation chips.", txSummary: "Paid Transactions: Weekly $11.25 | Monthly $44.99 | Yearly $430.00", txList: ["Weekly Transaction: $11.25 / week", "Monthly Transaction: $44.99 / month", "Yearly Transaction: $430.00 / year"], canDownload: false, dlNote: "NO DIRECT ENGINE INSTALLER: Cloud-hosted multiplayer generator; no standalone local engine binary." },
+  { id: 59, name: "Hi3D Agent Desktop Pro", cat: "3D Reality", url: "https://www.hi3d.ai", def: "Desktop AI 3D agent generating high-fidelity game meshes, textures, and playable 3D demos.", txSummary: "Paid Transactions: Weekly $8.00 | Monthly $32.00 | Yearly $310.00", txList: ["Weekly Transaction: $8.00 / week", "Monthly Transaction: $32.00 / month", "Yearly Transaction: $310.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable desktop agent & local 3D mesh/texture files." },
+  { id: 60, name: "Nilo Builder Pro", cat: "3D Anime", url: "https://nilo.io", def: "Collaborative 3D world builder unlocking full RBXMX Roblox Studio exports and priority AI.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $230.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $230.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable RBXMX / 3D world files for Roblox Studio." },
+  { id: 61, name: "Inworld AI Production NPC", cat: "3D Reality", url: "https://inworld.ai/pricing", def: "Commercial real-time AI NPC engine with low-latency voice, lip-sync, and Unreal/Unity SDKs.", txSummary: "Paid Transactions: Weekly $10.00 | Monthly $40.00 | Yearly $400.00", txList: ["Weekly Transaction: $10.00 / week", "Monthly Transaction: $40.00 / month", "Yearly Transaction: $400.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable commercial SDK packages for Unity & Unreal Engine." },
+  { id: 62, name: "Convai Scale NPC", cat: "3D Reality", url: "https://convai.com/pricing", def: "Production-grade conversational 3D NPC platform with spatial awareness and action execution.", txSummary: "Paid Transactions: Weekly $7.25 | Monthly $29.00 | Yearly $290.00", txList: ["Weekly Transaction: $7.25 / week", "Monthly Transaction: $29.00 / month", "Yearly Transaction: $290.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable engine plugins/SDKs for local 3D game projects." },
+  { id: 63, name: "Kaedim 3D Studio Asset", cat: "3D Reality", url: "https://www.kaedim3d.com", def: "AI + human-verified text/concept-to-3D production-ready game asset pipeline for studios.", txSummary: "Paid Transactions: Weekly $37.50 | Monthly $150.00 | Yearly $1,500.00", txList: ["Weekly Transaction: $37.50 / week", "Monthly Transaction: $150.00 / month", "Yearly Transaction: $1,500.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads clean game-ready 3D meshes (FBX/OBJ/GLTF) & PBR maps." },
+  { id: 64, name: "CSM.ai Pro Anime Mesh", cat: "3D Anime", url: "https://www.csm.ai/pricing", def: "High-resolution 3D anime & realistic character mesh generator with quad topology.", txSummary: "Paid Transactions: Weekly $12.50 | Monthly $49.00 | Yearly $480.00", txList: ["Weekly Transaction: $12.50 / week", "Monthly Transaction: $49.00 / month", "Yearly Transaction: $480.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads high-res quad-topology 3D character meshes." },
+  { id: 65, name: "Rodin Gen-1 Commercial", cat: "3D Reality", url: "https://hyperhuman.deemos.com", def: "Hyper-realistic 3D character and asset generator from text prompts with 4K PBR maps.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $30.00 | Yearly $299.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $30.00 / month", "Yearly Transaction: $299.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable 3D characters & 4K texture maps." },
+  { id: 66, name: "Blockade Labs Skybox Pro", cat: "3D Reality", url: "https://skybox.blockadelabs.com/pricing", def: "8K EXR HDRI 360° skybox and depth-map world generator for Unreal Engine 5 & Unity.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $228.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $228.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads high-res 360° skybox images & depth maps." },
+  { id: 67, name: "PixelLab Pro Animator", cat: "2D Anime", url: "https://www.pixellab.ai", def: "Dedicated 2D anime pixel-art sprite generator with 8-directional rotation and skeleton motion.", txSummary: "Paid Transactions: Weekly $3.50 | Monthly $12.00 | Yearly $115.00", txList: ["Weekly Transaction: $3.50 / week", "Monthly Transaction: $12.00 / month", "Yearly Transaction: $115.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads multi-angle 2D pixel-art sprite sheets & frames." },
+  { id: 68, name: "Layer.ai Studio Plan", cat: "2D Reality", url: "https://www.layer.ai/pricing", def: "Enterprise 2D game art generator with custom style locking, layered PSD exports, and seats.", txSummary: "Paid Transactions: Weekly $12.50 | Monthly $49.00 | Yearly $490.00", txList: ["Weekly Transaction: $12.50 / week", "Monthly Transaction: $49.00 / month", "Yearly Transaction: $490.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads layered PSD, PNG & 2D game art assets." },
+  { id: 69, name: "Promethean AI World", cat: "3D Reality", url: "https://www.prometheanai.com", def: "AI virtual world-building assistant that populates 3D realistic environments in Unreal Engine.", txSummary: "Paid Transactions: Weekly $15.00 | Monthly $60.00 | Yearly $600.00", txList: ["Weekly Transaction: $15.00 / week", "Monthly Transaction: $60.00 / month", "Yearly Transaction: $600.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable desktop/Unreal integration tool for local 3D worlds." },
+  { id: 70, name: "NVIDIA ACE Avatar Suite", cat: "3D Reality", url: "https://developer.nvidia.com/ace", def: "Cloud & RTX-accelerated AI suite for realistic 3D game character speech and facial animation.", txSummary: "Paid Transactions: Weekly $25.00 | Monthly $99.00 | Yearly $1,100.00", txList: ["Weekly Transaction: $25.00 / week", "Monthly Transaction: $99.00 / month", "Yearly Transaction: $1,100.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Provides downloadable SDKs/runtime modules for local RTX/game builds." },
+  { id: 71, name: "Unity Muse AI Assistant", cat: "3D Reality", url: "https://unity.com/products/muse", def: "Official Unity Editor AI assistant generating C# scripts, 2D/3D textures, and animations.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $30.00 | Yearly $300.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $30.00 / month", "Yearly Transaction: $300.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Works inside Unity Editor to generate local C# scripts, textures & builds." },
+  { id: 72, name: "GDevelop Pro Cloud", cat: "2D Reality", url: "https://gdevelop.io/pricing", def: "Unlocks unlimited AI game logic generation, cloud Android/iOS builds, and multiplayer.", txSummary: "Paid Transactions: Weekly $3.75 | Monthly $14.99 | Yearly $149.00", txList: ["Weekly Transaction: $3.75 / week", "Monthly Transaction: $14.99 / month", "Yearly Transaction: $149.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Desktop engine + downloadable mobile/desktop game builds." },
+  { id: 73, name: "Construct 3 Business", cat: "2D Anime", url: "https://www.construct.net/en/make-games/buy-construct-3", def: "Full commercial 2D game engine license with unlimited events, Steam/console exporters, and AI.", txSummary: "Paid Transactions: Weekly $4.00 | Monthly $15.99 | Yearly $129.00", txList: ["Weekly Transaction: $4.00 / week", "Monthly Transaction: $15.99 / month", "Yearly Transaction: $129.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Unlocks downloadable desktop/Steam/HTML5 game export packages." },
+  { id: 74, name: "RPG Maker Unite AI", cat: "2D Anime", url: "https://rpgmakerunite.com", def: "Commercial 2D anime JRPG engine enhanced with AI map, dialogue, and battler sprite tools.", txSummary: "Paid Transactions: Weekly $4.50 | Monthly $17.99 | Yearly $99.99", txList: ["Weekly Transaction: $4.50 / week", "Monthly Transaction: $17.99 / month", "Yearly Transaction: $99.99 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Local RPG engine package & standalone JRPG game exports." },
+  { id: 75, name: "NovelAI Opus Tier", cat: "2D Anime", url: "https://novelai.net/pricing", def: "Unlimited 2D anime character and background generation plus top-tier AI storytelling.", txSummary: "Paid Transactions: Weekly $6.25 | Monthly $25.00 | Yearly $240.00", txList: ["Weekly Transaction: $6.25 / week", "Monthly Transaction: $25.00 / month", "Yearly Transaction: $240.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated 2D anime images/stories can be downloaded locally." },
+  { id: 76, name: "Midjourney Pro Stealth", cat: "2D Anime", url: "https://www.midjourney.com", def: "Text-to-2D anime concept art, realistic textures, and character reference sheets with Stealth.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $30.00 | Yearly $288.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $30.00 / month", "Yearly Transaction: $288.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: High-res 2D anime & texture art can be downloaded as image files." },
+  { id: 77, name: "Leonardo.ai Maestro Pro", cat: "2D Anime", url: "https://leonardo.ai/pricing", def: "AI game asset studio generating 2D anime characters, isometric buildings, and UV textures.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $240.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $240.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads generated 2D sprites, textures & 3D texture assets." },
+  { id: 78, name: "Runway Gen-3 Alpha Pro", cat: "3D Reality", url: "https://runwayml.com/pricing", def: "Text-to-cinematic game cutscenes, 3D camera-controlled trailers, and realistic VFX sequences.", txSummary: "Paid Transactions: Weekly $7.00 | Monthly $28.00 | Yearly $336.00", txList: ["Weekly Transaction: $7.00 / week", "Monthly Transaction: $28.00 / month", "Yearly Transaction: $336.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads rendered cutscene/trailer video clips (MP4)." },
+  { id: 79, name: "Kling AI 3.0 Motion Pro", cat: "3D Anime", url: "https://klingai.com", def: "High-motion text-to-anime and 3D realistic game cutscene generator with character physics.", txSummary: "Paid Transactions: Weekly $6.50 | Monthly $25.99 | Yearly $250.00", txList: ["Weekly Transaction: $6.50 / week", "Monthly Transaction: $25.99 / month", "Yearly Transaction: $250.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Generated anime/3D cutscene clips can be downloaded as video files." },
+  { id: 80, name: "Seedance Combat Pro", cat: "3D Anime", url: "https://www.byteplus.com", def: "Commercial AI character animation generator producing fluid 3D anime combat sequences.", txSummary: "Paid Transactions: Weekly $8.00 | Monthly $32.00 | Yearly $320.00", txList: ["Weekly Transaction: $8.00 / week", "Monthly Transaction: $32.00 / month", "Yearly Transaction: $320.00 / year"], canDownload: false, dlNote: "NO DIRECT LOCAL ENGINE: Cloud/API enterprise media generation service without local engine installer." },
+  { id: 81, name: "DeepMotion Studio Pro", cat: "3D Reality", url: "https://www.deepmotion.com/pricing", def: "Commercial text-to-3D character animation and physics-simulated ragdoll motion export.", txSummary: "Paid Transactions: Weekly $9.75 | Monthly $39.00 | Yearly $360.00", txList: ["Weekly Transaction: $9.75 / week", "Monthly Transaction: $39.00 / month", "Yearly Transaction: $360.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads commercial 3D motion files (FBX/BVH) for game engines." },
+  { id: 82, name: "Plask AI Keyframe Pro", cat: "3D Anime", url: "https://plask.ai", def: "AI motion capture and text-to-keyframe 3D anime character animation editor in browser.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.00 | Yearly $290.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.00 / month", "Yearly Transaction: $290.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Exports downloadable 3D character animation files (FBX/GLB)." },
+  { id: 83, name: "Move.ai Studio Capture", cat: "3D Reality", url: "https://www.move.ai", def: "Markerless AI motion capture turning video and prompts into 3D skeletal game animations.", txSummary: "Paid Transactions: Weekly $12.50 | Monthly $49.00 | Yearly $499.00", txList: ["Weekly Transaction: $12.50 / week", "Monthly Transaction: $49.00 / month", "Yearly Transaction: $499.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads 3D skeletal mocap animation files for Unreal/Unity." },
+  { id: 84, name: "Kinetix AI Emote Studio", cat: "3D Anime", url: "https://www.kinetix.tech", def: "Text-to-3D avatar emote and dance generator with direct Roblox, Unity, and Unreal SDKs.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $30.00 | Yearly $300.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $30.00 / month", "Yearly Transaction: $300.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Provides downloadable SDKs & avatar animation assets." },
+  { id: 85, name: "Sloyd AI Commercial SDK", cat: "3D Reality", url: "https://www.sloyd.ai/pricing", def: "Unlimited commercial SDK & API access for real-time text-to-3D prop generation.", txSummary: "Paid Transactions: Weekly $5.00 | Monthly $20.00 | Yearly $180.00", txList: ["Weekly Transaction: $5.00 / week", "Monthly Transaction: $20.00 / month", "Yearly Transaction: $180.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Commercial 3D prop exports & SDK integration files." },
+  { id: 86, name: "Spline AI Super Plan", cat: "3D Anime", url: "https://spline.design/pricing", def: "Commercial 3D web game and interactive UI builder with unlimited AI style transfers.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $240.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $240.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Unlocks enhanced 3D file/code export options for projects." },
+  { id: 87, name: "Masterpiece X Studio", cat: "3D Reality", url: "https://www.masterpiecex.com/pricing", def: "High-volume text-to-3D mesh and auto-rigged character creator with commercial rights.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.99 | Yearly $299.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.99 / month", "Yearly Transaction: $299.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads high-volume rigged/textured 3D models for games." },
+  { id: 88, name: "3DFY.ai Catalog Pro", cat: "3D Reality", url: "https://3dfy.ai", def: "Automated large-scale text-to-3D catalog generation for open-world simulation games.", txSummary: "Paid Transactions: Weekly $15.00 | Monthly $60.00 | Yearly $600.00", txList: ["Weekly Transaction: $15.00 / week", "Monthly Transaction: $60.00 / month", "Yearly Transaction: $600.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads batch 3D catalog meshes in standard engine formats." },
+  { id: 89, name: "Alpha3D Asset Pro", cat: "3D Reality", url: "https://www.alpha3d.io", def: "Text and 2D-to-3D GLB/USDZ game asset generator built for AR, VR, and 3D reality engines.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.00 | Yearly $290.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.00 / month", "Yearly Transaction: $290.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Directly downloads GLB/USDZ/FBX 3D game assets." },
+  { id: 90, name: "World Labs LWM Pro", cat: "3D Reality", url: "https://www.worldlabs.ai", def: "Large World Model generating persistent, navigable 3D realistic environments from text.", txSummary: "Paid Transactions: Weekly $12.50 | Monthly $50.00 | Yearly $500.00", txList: ["Weekly Transaction: $12.50 / week", "Monthly Transaction: $50.00 / month", "Yearly Transaction: $500.00 / year"], canDownload: false, dlNote: "NO DIRECT FULL-WORLD INSTALLER: Cloud Large World Model environment generation; local engine export is restricted/evolving." },
+  { id: 91, name: "Odyssey World Model Pro", cat: "3D Reality", url: "https://odyssey.world", def: "Generative 3D reality world model producing editable Gaussian-splat game environments.", txSummary: "Paid Transactions: Weekly $10.00 | Monthly $40.00 | Yearly $400.00", txList: ["Weekly Transaction: $10.00 / week", "Monthly Transaction: $40.00 / month", "Yearly Transaction: $400.00 / year"], canDownload: false, dlNote: "NO DIRECT STANDALONE ENGINE: Cloud generative world platform without a single-click local game engine installer." },
+  { id: 92, name: "Decart Mirage Neural AI", cat: "3D Reality", url: "https://www.decart.ai", def: "Real-time interactive neural game engine rendering playable 3D worlds from text prompts.", txSummary: "Paid Transactions: Weekly $9.00 | Monthly $35.00 | Yearly $350.00", txList: ["Weekly Transaction: $9.00 / week", "Monthly Transaction: $35.00 / month", "Yearly Transaction: $350.00 / year"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Real-time cloud neural world stream; does not download as a traditional local game engine." },
+  { id: 93, name: "AI Dungeon Mythic Plan", cat: "2D Anime", url: "https://aidungeon.com/pricing", def: "High-context AI RPG engine with custom anime image generation and multiplayer hosting.", txSummary: "Paid Transactions: Weekly $7.50 | Monthly $29.99 | Yearly $299.00", txList: ["Weekly Transaction: $7.50 / week", "Monthly Transaction: $29.99 / month", "Yearly Transaction: $299.00 / year"], canDownload: false, dlNote: "NO DIRECT DOWNLOAD: Hosted online RPG/story service; no local game engine or offline model download." },
+  { id: 94, name: "Charisma.ai Studio Plan", cat: "3D Anime", url: "https://charisma.ai/pricing", def: "Commercial interactive storytelling and AI voice character engine for 2D/3D anime RPGs.", txSummary: "Paid Transactions: Weekly $8.00 | Monthly $32.00 | Yearly $320.00", txList: ["Weekly Transaction: $8.00 / week", "Monthly Transaction: $32.00 / month", "Yearly Transaction: $320.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable commercial SDKs & dialogue packages for local engines." },
+  { id: 95, name: "Replica Studios Voice Pro", cat: "3D Reality", url: "https://www.replicastudios.com", def: "AI game voice acting studio with Unreal & Unity plugins for 3D character dialogue.", txSummary: "Paid Transactions: Weekly $6.00 | Monthly $24.00 | Yearly $240.00", txList: ["Weekly Transaction: $6.00 / week", "Monthly Transaction: $24.00 / month", "Yearly Transaction: $240.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads character voice WAV/MP3 files & engine plugins." },
+  { id: 96, name: "ElevenLabs Creator Voice", cat: "2D Anime", url: "https://elevenlabs.io/pricing", def: "High-emotion AI voice cloning and multilingual dubbing for commercial anime games.", txSummary: "Paid Transactions: Weekly $5.50 | Monthly $22.00 | Yearly $220.00", txList: ["Weekly Transaction: $5.50 / week", "Monthly Transaction: $22.00 / month", "Yearly Transaction: $220.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads high-quality voice audio files for game dialogue." },
+  { id: 97, name: "Suno AI Pro Soundtrack", cat: "2D Reality", url: "https://suno.com/pricing", def: "Commercial copyright-cleared AI game soundtrack generator with stem separation.", txSummary: "Paid Transactions: Weekly $2.50 | Monthly $10.00 | Yearly $96.00", txList: ["Weekly Transaction: $2.50 / week", "Monthly Transaction: $10.00 / month", "Yearly Transaction: $96.00 / year ($8/mo eq.)"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads commercial WAV/MP3 music tracks & stems for games." },
+  { id: 98, name: "AIVA Pro JRPG Composer", cat: "3D Anime", url: "https://www.aiva.ai", def: "AI orchestral & JRPG soundtrack composer providing full MIDI and WAV copyright ownership.", txSummary: "Paid Transactions: Weekly $8.25 | Monthly $33.00 | Yearly $396.00", txList: ["Weekly Transaction: $8.25 / week", "Monthly Transaction: $33.00 / month", "Yearly Transaction: $396.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloads full MIDI & WAV game soundtrack files." },
+  { id: 99, name: "Krotos Studio Foley Pro", cat: "3D Reality", url: "https://www.krotosaudio.com", def: "Real-time text-to-foley and interactive 3D game sound effects engine for ambience.", txSummary: "Paid Transactions: Weekly $4.75 | Monthly $18.99 | Yearly $179.00", txList: ["Weekly Transaction: $4.75 / week", "Monthly Transaction: $18.99 / month", "Yearly Transaction: $179.00 / year"], canDownload: true, dlNote: "REAL DOWNLOAD: Downloadable desktop audio/foley software & WAV sound effects." },
+  { id: 100, name: "Cursor AI Game Coder", cat: "3D Reality", url: "https://www.cursor.com", def: "AI-native code editor generating complete 2D/3D HTML5, Three.js, Unity, and Unreal code.", txSummary: "Paid Transactions: Weekly $5.00 | Monthly $20.00 | Yearly $192.00", txList: ["Weekly Transaction: $5.00 / week", "Monthly Transaction: $20.00 / month", "Yearly Transaction: $192.00 / year ($16/mo eq.)"], canDownload: true, dlNote: "REAL DOWNLOAD: Full downloadable desktop code editor & local game source code." }
+];
+
+const allPlatforms = [...freePlatforms, ...paidPlatforms];
+
+function formatTxHTML(item) {
+  const bullets = (item.txList || []).map(t => `<li>${t}</li>`).join("");
+  return `<div><strong>${item.txSummary}</strong><ul class="tx-list">${bullets}</ul></div>`;
+}
+
+// ============================================================================
+// 2. OFFLINE LOCALSTORAGE STATE (PERMANENT LOCKS & RETRIEVED CLEARS)
+// ============================================================================
+const STORAGE_KEY = "AI_TEXT_TO_GAME_100_DL_REALITY_PERMANENT_V5";
+let db = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+let currentModalItem = null;
+
+function persistDB() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(db));
+  updateCounters();
+}
+
+function getRealTimeStamp() {
+  return new Date().toLocaleString("en-US", {
+    year: "numeric", month: "short", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
+  });
+}
+
+// ============================================================================
+// 3. WEB AUDIO SOUND EFFECTS & AI VOICE SYNTHESIS
+// ============================================================================
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playTone(freq, type = "sine", duration = 0.12, vol = 0.08) {
+  try {
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + duration);
+  } catch (e) {}
+}
+
+function playHoverSound() { playTone(520, "sine", 0.06, 0.025); }
+function playModalSound() {
+  playTone(340, "triangle", 0.14, 0.08);
+  setTimeout(() => playTone(680, "sine", 0.18, 0.08), 80);
+}
+function playDecisionSound(isPositive) {
+  if (isPositive) {
+    playTone(523.25, "sine", 0.12, 0.1);
+    setTimeout(() => playTone(783.99, "sine", 0.2, 0.1), 90);
+  } else {
+    playTone(260, "sawtooth", 0.14, 0.08);
+    setTimeout(() => playTone(185, "sawtooth", 0.22, 0.08), 100);
+  }
+}
+
+function speakAI(text) {
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 1.04;
+  utter.pitch = 1.05;
+  const eq = document.getElementById("voiceEqualizer");
+  const statusTxt = document.getElementById("voiceStatusText");
+
+  utter.onstart = () => {
+    eq.classList.add("speaking");
+    statusTxt.textContent = "🔊 AI Voice Speaking...";
+  };
+  utter.onend = () => {
+    eq.classList.remove("speaking");
+    statusTxt.textContent = "AI Voice Finished";
+  };
+  utter.onerror = () => {
+    eq.classList.remove("speaking");
+    statusTxt.textContent = "AI Voice Ready";
+  };
+  window.speechSynthesis.speak(utter);
+}
+
+// ============================================================================
+// 4. WANT/NOT VISIT + REALLY DOWNLOAD/NOT DOWNLOAD + RETRIEVE / NOT RETRIEVE
+// ============================================================================
+function saveVisitChoice(id, choice) {
+  const rec = db[id] || { id, history: [] };
+  if (rec.visitLocked === true && rec.popupHidden !== true) return;
+
+  playDecisionSound(choice === "WANT");
+  const stamp = getRealTimeStamp();
+  db[id] = {
+    ...rec,
+    id,
+    visitChoice: choice, // "WANT" or "NOT_WANT"
+    visitLocked: true,
+    popupHidden: false,
+    visitTimestamp: stamp,
+    history: [
+      ...(rec.history || []),
+      {
+        action: choice === "WANT" ? "Saved: Want to visit this" : "Saved: I don't want to visit this",
+        time: stamp,
+        mode: "PERMANENT POP-UP & LOCK"
+      }
+    ]
+  };
+  persistDB();
+  renderAll();
+  if (currentModalItem && currentModalItem.id === id) {
+    openModal(currentModalItem, false);
+  }
+}
+
+function saveDownloadChoice(id, dlChoice) {
+  const item = allPlatforms.find(p => p.id === id);
+  const rec = db[id] || { id, history: [] };
+  if (rec.dlLocked === true && rec.popupHidden !== true) return;
+
+  playDecisionSound(dlChoice === "REALLY_DOWNLOAD");
+  const stamp = getRealTimeStamp();
+  const truthLabel = item && item.canDownload ? "Real Download Available" : "No Direct Download / Web-Only";
+
+  db[id] = {
+    ...rec,
+    id,
+    dlChoice, // "REALLY_DOWNLOAD" or "NOT_DOWNLOAD"
+    dlLocked: true,
+    popupHidden: false,
+    dlTimestamp: stamp,
+    history: [
+      ...(rec.history || []),
+      {
+        action: dlChoice === "REALLY_DOWNLOAD"
+          ? `Saved: Really Download (${truthLabel})`
+          : `Saved: Not Download (${truthLabel})`,
+        time: stamp,
+        mode: "PERMANENT POP-UP & LOCK"
+      }
+    ]
+  };
+  persistDB();
+  renderAll();
+  if (currentModalItem && currentModalItem.id === id) {
+    openModal(currentModalItem, false);
+  }
+}
+
+// RETRIEVE: Immediately removes pop-up tier/transaction box, download-truth note,
+// and saved Want/Not/Download pop-ups—saved locally offline even after refresh!
+function clickRetrieve(id) {
+  playTone(720, "triangle", 0.14, 0.09);
+  setTimeout(() => playTone(440, "sine", 0.16, 0.08), 80);
+  const rec = db[id] || { id, history: [] };
+  const stamp = getRealTimeStamp();
+  db[id] = {
+    ...rec,
+    id,
+    visitChoice: null,
+    visitLocked: false,
+    dlChoice: null,
+    dlLocked: false,
+    popupHidden: true,
+    retrievedAt: stamp,
+    history: [
+      ...(rec.history || []),
+      {
+        action: "RETRIEVED — Pop-Up Tier, Download Note & Saved Status Removed Offline",
+        time: stamp,
+        mode: "LOCALLY SAVED REMOVED"
+      }
+    ]
+  };
+  persistDB();
+  renderAll();
+  renderHistoryModal();
+}
+
+// NOT RETRIEVE: Keeps the old pop-up tier/transaction box, download-truth note,
+// and saved choices permanently visible and locked offline even after refresh!
+function clickNotRetrieve(id) {
+  const rec = db[id];
+  if (!rec) return;
+  const vChoice = rec.visitChoice || "WANT";
+  const dChoice = rec.dlChoice || "REALLY_DOWNLOAD";
+  playDecisionSound(vChoice === "WANT");
+  const stamp = getRealTimeStamp();
+  db[id] = {
+    ...rec,
+    id,
+    visitChoice: vChoice,
+    visitLocked: true,
+    dlChoice: dChoice,
+    dlLocked: true,
+    popupHidden: false,
+    visitTimestamp: rec.visitTimestamp || stamp,
+    dlTimestamp: rec.dlTimestamp || stamp,
+    history: [
+      ...(rec.history || []),
+      {
+        action: "NOT RETRIEVED — Old Pop-Ups & Saved Choices Kept Permanent",
+        time: stamp,
+        mode: "PERMANENTLY LOCKED"
+      }
+    ]
+  };
+  persistDB();
+  renderAll();
+  renderHistoryModal();
+}
+
+function renderCardHTML(item, isPaid) {
+  const rec = db[item.id];
+  const isPopupHidden = rec && rec.popupHidden === true;
+  const isVisitLocked = rec && rec.visitLocked === true && !isPopupHidden;
+  const isDlLocked = rec && rec.dlLocked === true && !isPopupHidden;
+
+  const hiddenClass = isPopupHidden ? "retrieved-hidden" : "";
+  const pricingClass = `${isPaid ? "pricing-box" : "pricing-box free-box"} ${hiddenClass}`;
+  const truthBoxClass = `dl-truth-box ${hiddenClass}`;
+
+  let savedPopupsHTML = "";
+  if (isVisitLocked) {
+    const isWant = rec.visitChoice === "WANT";
+    savedPopupsHTML += `
+      <div class="lock-status active ${isWant ? "status-want" : "status-notwant"}">
+        <strong>${isWant ? "✅ PERMANENTLY SAVED: WANT TO VISIT" : "⛔ PERMANENTLY SAVED: DON'T WANT TO VISIT"}</strong><br>
+        🕒 Timestamp: ${rec.visitTimestamp} (Offline Permanent)
+      </div>
+    `;
+  }
+  if (isDlLocked) {
+    const isRealDl = rec.dlChoice === "REALLY_DOWNLOAD";
+    savedPopupsHTML += `
+      <div class="lock-status active status-dl">
+        <strong>${isRealDl ? "⬇️ PERMANENTLY SAVED: REALLY DOWNLOAD" : "🚫 PERMANENTLY SAVED: NOT DOWNLOAD"}</strong><br>
+        🕒 Timestamp: ${rec.dlTimestamp} (Offline Permanent)
+      </div>
+    `;
+  }
+
+  return `
+    <div class="ai-card ${isPaid ? "paid-card" : ""}" onmouseenter="playHoverSound()">
+      <div class="card-header" onclick="openModalById(${item.id})">
+        <div class="badge-row">
+          <span class="num-badge">#${String(item.id).padStart(2, "0")}</span>
+          <span class="cat-badge">${item.cat}</span>
+          <span class="tier-badge ${isPaid ? "tier-paid" : "tier-free"}">${isPaid ? "PAID / SUBSCRIPTION" : "FREE ACCESS"}</span>
+          <span class="dl-fact-badge ${item.canDownload ? "dl-yes" : "dl-no"}">${item.canDownload ? "⬇️ CAN DOWNLOAD" : "🚫 WEB-ONLY / NO DL"}</span>
+        </div>
+        <div class="ai-title">${item.name}</div>
+        <div class="ai-def">${item.def}</div>
+      </div>
+
+      <div>
+        <div class="${pricingClass}">${formatTxHTML(item)}</div>
+        <div class="${truthBoxClass}"><strong>Reality Check:</strong> ${item.dlNote}</div>
+        <div class="action-bar">
+          <a class="btn btn-visit" href="${item.url}" target="_blank" rel="noopener noreferrer" onclick="playTone(750,'sine',0.1,0.08)">🌐 Link ↗</a>
+          <button class="btn btn-want" ${isVisitLocked ? "disabled" : ""} onclick="saveVisitChoice(${item.id}, 'WANT')">✅ Want to visit this</button>
+          <button class="btn btn-notwant" ${isVisitLocked ? "disabled" : ""} onclick="saveVisitChoice(${item.id}, 'NOT_WANT')">⛔ I don't want to visit this</button>
+          <button class="btn btn-dl-yes" ${isDlLocked ? "disabled" : ""} onclick="saveDownloadChoice(${item.id}, 'REALLY_DOWNLOAD')">⬇️ Really Download</button>
+          <button class="btn btn-dl-no" ${isDlLocked ? "disabled" : ""} onclick="saveDownloadChoice(${item.id}, 'NOT_DOWNLOAD')">🚫 Not Download</button>
+        </div>
+        ${savedPopupsHTML}
+      </div>
+    </div>
+  `;
+}
+
+function renderAll() {
+  const search = document.getElementById("searchInput").value.toLowerCase().trim();
+  const cat = document.getElementById("categoryFilter").value;
+  const tier = document.getElementById("tierFilter").value;
+  const dlFilter = document.getElementById("downloadFilter").value;
+
+  const filterFn = (item) => {
+    const matchSearch =
+      item.name.toLowerCase().includes(search) ||
+      item.def.toLowerCase().includes(search) ||
+      item.cat.toLowerCase().includes(search) ||
+      item.txSummary.toLowerCase().includes(search) ||
+      item.dlNote.toLowerCase().includes(search);
+    const matchCat = cat === "ALL" || item.cat === cat;
+    const matchDl =
+      dlFilter === "ALL" ||
+      (dlFilter === "CAN_DOWNLOAD" && item.canDownload) ||
+      (dlFilter === "NO_DOWNLOAD" && !item.canDownload);
+    return matchSearch && matchCat && matchDl;
+  };
+
+  const freeSec = document.getElementById("freeSectionHeader");
+  const paidSec = document.getElementById("paidSectionHeader");
+  const freeGrid = document.getElementById("freeGrid");
+  const paidGrid = document.getElementById("paidGrid");
+
+  const filteredFree = tier === "PAID" ? [] : freePlatforms.filter(filterFn);
+  const filteredPaid = tier === "FREE" ? [] : paidPlatforms.filter(filterFn);
+
+  freeSec.style.display = tier === "PAID" ? "none" : "flex";
+  paidSec.style.display = tier === "FREE" ? "none" : "flex";
+
+  freeGrid.innerHTML = filteredFree.map(item => renderCardHTML(item, false)).join("");
+  paidGrid.innerHTML = filteredPaid.map(item => renderCardHTML(item, true)).join("");
+
+  document.getElementById("visibleCount").textContent = filteredFree.length + filteredPaid.length;
+  updateCounters();
+}
+
+function updateCounters() {
+  const realDl = allPlatforms.filter(p => p.canDownload).length;
+  const noDl = allPlatforms.filter(p => !p.canDownload).length;
+  const entries = Object.values(db);
+  const perm = entries.filter(r => !r.popupHidden && (r.visitLocked || r.dlLocked)).length;
+  const cleared = entries.filter(r => r.popupHidden === true).length;
+
+  document.getElementById("realDlCount").textContent = realDl;
+  document.getElementById("noDlCount").textContent = noDl;
+  document.getElementById("permCount").textContent = perm;
+  document.getElementById("clearedCount").textContent = cleared;
+  document.getElementById("historyCount").textContent = entries.length;
+}
+
+// ============================================================================
+// 5. MODAL OPEN & 2-SECOND EASE FADE + GLOW BLINK CLOSE
+// ============================================================================
+function openModalById(id) {
+  const item = allPlatforms.find(p => p.id === id);
+  if (item) openModal(item, true);
+}
+
+function openModal(item, speak = true) {
+  currentModalItem = item;
+  const isPaid = item.id > 50;
+  const rec = db[item.id];
+  const isPopupHidden = rec && rec.popupHidden === true;
+  const isVisitLocked = rec && rec.visitLocked === true && !isPopupHidden;
+  const isDlLocked = rec && rec.dlLocked === true && !isPopupHidden;
+  const hiddenClass = isPopupHidden ? "retrieved-hidden" : "";
+
+  document.getElementById("modalBadges").innerHTML = `
+    <span class="num-badge">#${String(item.id).padStart(2, "0")}</span>
+    <span class="cat-badge">${item.cat}</span>
+    <span class="tier-badge ${isPaid ? "tier-paid" : "tier-free"}">${isPaid ? "PAID / SUBSCRIPTION" : "FREE ACCESS ACCOUNT"}</span>
+    <span class="dl-fact-badge ${item.canDownload ? "dl-yes" : "dl-no"}">${item.canDownload ? "⬇️ CAN DOWNLOAD" : "🚫 WEB-ONLY / NO DL"}</span>
+  `;
+  document.getElementById("modalTitle").textContent = item.name;
+  document.getElementById("modalDef").textContent = item.def;
+
+  const priceBox = document.getElementById("modalPricing");
+  priceBox.innerHTML = formatTxHTML(item);
+  priceBox.className = `${isPaid ? "pricing-box" : "pricing-box free-box"} ${hiddenClass}`;
+
+  const dlTruthBox = document.getElementById("modalDlTruth");
+  dlTruthBox.innerHTML = `<strong>Real Download Truth:</strong> ${item.dlNote}`;
+  dlTruthBox.className = `dl-truth-box ${hiddenClass}`;
+
+  document.getElementById("modalVisitLink").href = item.url;
+
+  const wantBtn = document.getElementById("modalWantBtn");
+  const notWantBtn = document.getElementById("modalNotWantBtn");
+  const dlYesBtn = document.getElementById("modalDlYesBtn");
+  const dlNoBtn = document.getElementById("modalDlNoBtn");
+
+  wantBtn.disabled = isVisitLocked;
+  notWantBtn.disabled = isVisitLocked;
+  dlYesBtn.disabled = isDlLocked;
+  dlNoBtn.disabled = isDlLocked;
+
+  wantBtn.onclick = () => saveVisitChoice(item.id, "WANT");
+  notWantBtn.onclick = () => saveVisitChoice(item.id, "NOT_WANT");
+  dlYesBtn.onclick = () => saveDownloadChoice(item.id, "REALLY_DOWNLOAD");
+  dlNoBtn.onclick = () => saveDownloadChoice(item.id, "NOT_DOWNLOAD");
+
+  const lockBanner = document.getElementById("modalLockBanner");
+  let bannerParts = [];
+  if (isVisitLocked) {
+    bannerParts.push(`🔒 Visit Choice: <strong>${rec.visitChoice === "WANT" ? "Want to visit this" : "I don't want to visit this"}</strong> (${rec.visitTimestamp})`);
+  }
+  if (isDlLocked) {
+    bannerParts.push(`⬇️ Download Choice: <strong>${rec.dlChoice === "REALLY_DOWNLOAD" ? "Really Download" : "Not Download"}</strong> (${rec.dlTimestamp})`);
+  }
+
+  if (bannerParts.length > 0) {
+    lockBanner.className = "lock-status active status-dl";
+    lockBanner.innerHTML = bannerParts.join("<br>");
+  } else {
+    lockBanner.className = "lock-status";
+  }
+
+  document.getElementById("modalReplayVoice").onclick = () => {
+    speakAI(`${item.name}. Category: ${item.cat}. ${item.def}. ${item.txSummary}. ${item.dlNote}`);
+  };
+
+  const modalEl = document.getElementById("detailModal");
+  modalEl.classList.remove("closing");
+  modalEl.classList.add("open");
+
+  if (speak) {
+    playModalSound();
+    speakAI(`${item.name}. ${item.cat}. ${item.def}. ${item.dlNote}`);
+  }
+}
+
+function closeModalWithEaseBlink(modalId, stopVoice = false) {
+  const modalEl = document.getElementById(modalId);
+  if (!modalEl.classList.contains("open") || modalEl.classList.contains("closing")) return;
+
+  if (stopVoice && "speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+
+  playTone(620, "sine", 0.14, 0.07);
+  setTimeout(() => playTone(310, "triangle", 0.25, 0.07), 180);
+
+  modalEl.classList.add("closing");
+  setTimeout(() => {
+    modalEl.classList.remove("open", "closing");
+  }, 2000);
+}
+
+function renderHistoryModal() {
+  const container = document.getElementById("historyListContainer");
+  const entries = Object.values(db);
+
+  if (entries.length === 0) {
+    container.innerHTML = `<p style="color: var(--text-muted); text-align: center; padding: 20px;">No history yet. Click Want/Not Visit or Really Download/Not Download on any AI card.</p>`;
+    return;
+  }
+
+  container.innerHTML = entries.map(rec => {
+    const item = allPlatforms.find(p => p.id === rec.id);
+    if (!item) return "";
+
+    const stateLabel = rec.popupHidden
+      ? `<span style="color: var(--amber); font-weight: bold;">🗑️ RETRIEVED (Pop-Ups Removed Offline)</span>`
+      : `<span style="color: var(--emerald); font-weight: bold;">🔒 NOT RETRIEVED (Old Pop-Ups Kept Permanent)</span>`;
+
+    const logs = (rec.history || []).map(h => `<li>${h.action} — <em>${h.time}</em> [${h.mode}]</li>`).join("");
+
+    return `
+      <div class="history-item">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
+          <strong>#${String(item.id).padStart(2, "0")} ${item.name} (${item.cat})</strong>
+          ${stateLabel}
+        </div>
+        <div style="font-size:0.78rem; color:var(--cyan); margin-top:4px;">${item.txSummary}</div>
+        <div style="font-size:0.76rem; color:#dfb8ff; margin-top:2px;">${item.dlNote}</div>
+        <ul style="font-size: 0.76rem; color: var(--text-muted); margin: 8px 0 0 18px;">
+          ${logs}
+        </ul>
+        <div class="history-actions">
+          <button class="btn btn-retrieve" onclick="clickRetrieve(${item.id})">♻️ RETRIEVE (Remove Pop-Ups &amp; Save Offline)</button>
+          <button class="btn btn-keep-locked" onclick="clickNotRetrieve(${item.id})">🔒 NOT RETRIEVE (Keep Old Pop-Ups Permanent)</button>
+          <a class="btn btn-visit" href="${item.url}" target="_blank" rel="noopener noreferrer">🌐 Open Link ↗</a>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+// ============================================================================
+// 6. EVENT LISTENERS
+// ============================================================================
+document.getElementById("searchInput").addEventListener("input", renderAll);
+document.getElementById("categoryFilter").addEventListener("change", renderAll);
+document.getElementById("tierFilter").addEventListener("change", renderAll);
+document.getElementById("downloadFilter").addEventListener("change", renderAll);
+
+document.getElementById("closeDetailModal").addEventListener("click", () => {
+  closeModalWithEaseBlink("detailModal", true);
+});
+
+document.getElementById("detailModal").addEventListener("click", () => {
+  closeModalWithEaseBlink("detailModal", true);
+});
+
+document.getElementById("openHistoryBtn").addEventListener("click", () => {
+  playModalSound();
+  renderHistoryModal();
+  const hModal = document.getElementById("historyModal");
+  hModal.classList.remove("closing");
+  hModal.classList.add("open");
+});
+
+document.getElementById("closeHistoryModal").addEventListener("click", () => {
+  closeModalWithEaseBlink("historyModal", false);
+});
+
+document.getElementById("historyModal").addEventListener("click", () => {
+  closeModalWithEaseBlink("historyModal", false);
+});
+
+renderAll();
+</script>
+</body>
+</html>
